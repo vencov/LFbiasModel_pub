@@ -23,7 +23,27 @@ This function produces cochlear responses needed for two-tone stimulation condit
 Used for simulations with a **single combination of** L1, L2, F1, and F2.  
 It calls `CochleaRGB_Tone_AVDisertace_Tone2` internally and, after completing the simulation, performs a **DFT (Discrete Fourier Transform)** on the output.
 
-"visFig12Lbias_CompareStatic.m" "visFig1.m" "visFig2JASA_2ndOrderBFDP.m" "visFig3JASA_1stOrderBFDP.m" "visFig4JASA_TWs2ndOrderBF_rev.m" "visFig5.m" "visFig6.m" "visFig7_VelkeLevely.m" "visFig8_VelkeLevelySym.m" "visFig9_LFbiasSpectra_2ndBF.m" "visFig10_LFbiasSpectra_1stBF_OPm100.m" "visFig11_NumSideBandsEffect2ndBF.m" 
+## **LF Bias Tone Simulation Scripts**
+
+These scripts are used for simulating **low-frequency (LF) bias tone effects**.  
+The term **1st** refers to *first-order BF*, and **2nd** refers to *second-order BF* conditions.
+
+---
+
+### **LF Bias Simulation – 2nd Order BF (Phase Analysis)**
+**File:** `Notas2Supression_2nd_PhaseAns_OPs.m`  
+This script performs LF bias tone simulations for **second-order BF** and generates the corresponding *phase analysis* outputs.
+
+### **LF Bias Simulation – 1st Order BF (Phase Analysis)**
+**File:** `Notas2Supression_1st_PhaseAns_OPs.m`  
+This script performs LF bias tone simulations for **first-order BF** and generates the corresponding *phase analysis* outputs.
+
+### **LF Bias Simulation – 2nd Order BF (L1/L2 Analysis)**
+**File:** `Notas2Supression_2nd_L1L2.m`  
+This script performs LF bias tone simulations for **second-order BF** and produces the *L1/L2 parametric analysis* outputs.
+
+---
+
 
 
 ## **Overview of Figure-Generating Scripts (Fig. 1–12)**
