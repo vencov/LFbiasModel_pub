@@ -1,10 +1,10 @@
-# Cochlear Model Simulation Tools
+# Model implementation and scripts for ploting of figures
 
 This repository contains MATLAB and Python source code used for the paper:
 
 **Vetešník et al. (2025). _Evaluating a cochlear transducer function and its operating point from low-frequency modulated distortion-product_. Journal of the Acoustical Society of America.**
 
-The repository includes tools for simulating otoacoustic emissions in a cochlear model.
+The repository includes tools for simulating otoacoustic emissions in a cochlear model. The simulated data are not included because their size is too large for github repository
 
 ---
 
