@@ -1,7 +1,7 @@
 %script to use for repeatedly calling the function Sim2ToneCDQDBF1
-A1o=[40,45,50,55,60,65,70,75,80];%[dB SPL] amplitude of F1 primary
+A1o=[30,40,45,50,55,60,65,70];%[dB SPL] amplitude of F1 primary
 F1o=2176; %[Hz] frequency of F1 primary
-A2o=[40,45,50,55,60,65,70,75,80]; %[dB SPL] amplitude of F2 primary
+A2o=[30,40,45,50,55,60,65,70]; %[dB SPL] amplitude of F2 primary
 F2o=2688; %[Hz] frequency of F2 primary
 gain=1.45; %parameter to control gain of feedback force U
 phi1o=0; %phase of F1 primary
@@ -43,7 +43,7 @@ for j=1:Nlevel
         oaeStFdpa(nc)=abs(oaeStFdp);oaeStFdp2a(nc)=abs(oaeStFdp2);
         nc=nc+1;
     end
-    savefilename=['DPOAEOPL1',num2str(A1o(j)),'L2',num2str(A2o(j)),'V4.mat'];
+    savefilename=['DPOAEOPL1',num2str(A1o(j)),'L2',num2str(A2o(j)),'V3.mat'];
     A1c=A1o(j);A2c=A2o(j);
     save(savefilename,'A1c','A2c','F1o','F2o','TMres','faca0','facb0','oaeFdpa','oaeFdp2a',...
         'oaeStFdpa','oaeStFdp2a','RRF1a','RRF1ph','RRF2a','RRF2ph','RRFdpa','RRFdpph',...

@@ -15,7 +15,7 @@ A3o = [90:5:120];
 A3o = 115;
 F3o=32;% 25, 32, 50, 75, and 100 [Hz]
 phi3o=-pi/2;
-T3ono=0.1;
+T3ono=0.1;  
 %nastaveni zesilovace
 facb=0.2;
 faca=0.2;
