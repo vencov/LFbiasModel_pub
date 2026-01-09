@@ -1,5 +1,5 @@
 function [oae,tim,x,RR,UU,UUr,oaeSt,TMdisp,UUr1]=CochleaRGB_Tone_AVDisertace_Tone2(A1o,F1o,A2o,F2o,gain,phi1o,phi2o,T12ono,visual,TMres,faca0,facb0,OPo)
-%performs time domain simulation of nonlinear hydrodynamic cochlea model for two tones 
+%performs time domain simulation of nonlinear hydrodynamic cochlea model for two tones, second order BF 
 %OUTPUT
 %oae .... OAE estimated by the displacement of first BM segment
 %tim .... time vector

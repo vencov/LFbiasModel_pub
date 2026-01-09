@@ -1,16 +1,14 @@
 function [Sig]=Inp_sig2PrimariesME(F1,A1,F2,A2,t,phi1,phi2,T12on)
-% function [Sig]=Inp_sigSrc2or3ME(F1,A1,F2,A2,t,phi1,phi2,T2on,T2off,T1off,Fsup,Asup,phisup)
-% generate input signal composed either of 2 or 3 tones (3 tones in case of
-% a suppressor for Fdp component)
+% generate input signal composed of 2 tones 
 % 
 %
 
 om1=2*pi*F1;
 AM1=db2inputME(A1);
 om2=2*pi*F2;
-AM2=db2inputME(A2);%*om2^2;   %second time derivative
+AM2=db2inputME(A2);
   
-durHW = T12on; % duration of  ramp
+durHW = T12on; % duration of  onset ramp
 
   
     

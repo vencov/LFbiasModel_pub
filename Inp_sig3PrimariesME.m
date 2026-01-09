@@ -1,6 +1,6 @@
 function [Sig]=Inp_sig3PrimariesME(F1,A1,F2,A2,F3,A3,t,phi1,phi2,phi3,T12on,T3on)
-% function [Sig]=Inp_sig3PrimariesME(F1,A1,F2,A2,F3,A3,t,phi1,phi2,phi3,T12on,T3on)
-% generate input signal composed of 3 tones, two primaries and one low frequency bias tone
+% generate input signal composed of 3 tones, two primaries (F1,F2) and one
+% low frequency bias tone (F3)
 %
 %
 
@@ -13,7 +13,7 @@ AM3=db2inputME(A3);
 
 
 
-% two tones
+
 if t<T3on
     Sig=m_hann(t,T12on)*(AM1*cos(om1*t+phi1)+AM2*cos(om2*t+phi2))+m_hann(t,T3on)*AM3*cos(om3*t+phi3);
 else

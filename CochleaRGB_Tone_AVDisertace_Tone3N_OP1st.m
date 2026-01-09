@@ -1,23 +1,33 @@
 function [oae,tim,x,RR,UU,UUr,oaeSt,TMdisp,UUr1]=CochleaRGB_Tone_AVDisertace_Tone3N_OP1st(A1o,F1o,A2o,F2o,gain,phi1o,phi2o,T12ono,visual,TMres,A3o,F3o,phi3o,T3ono,faca0,facb0,OPo)
-% nonlinear force
+%performs time domain simulation of nonlinear hydrodynamic cochlea model for two tones, first order BF 
+%OUTPUT
+%oae .... OAE estimated by the displacement of first BM segment
+%tim .... time vector
+%x   .... coordinates along the BM in the longitudinal direction
+%RR  .... matrix with BM displacement in steady state
+%UU  .... matrix with U, i.e. feedback force in steady state
+%UUr ..... matrix with nonlinear part of U in steady state, not multiplied by first derivative of BF
+%oaeSt ... OAE estimated by at ear drum, probably wrong not used
+%TMdisp ... matrix with TM displacement in steady state
+%UUrl .... matrix with nonlinear part of U in steady state, multiplied by first derivative of BF
 
 if nargin < 1,  A1o=40; end %[dB SPL] amplitude of F1 primary
 if nargin < 2,  F1o=2000; end%[Hz] frequency of F1 primary
 if nargin < 3,  A2o=40; end %[dB SPL] amplitude of F2 primary
 if nargin < 4,  F2o=2400; end%[Hz] frequency of F2 primary
-if nargin < 5,  gain=1.32; end
-if nargin < 6,  phi1o=0; end
-if nargin < 7,  phi2o=0; end
-if nargin < 8, T12ono = 0.005; end;
-if nargin < 9, visual = 1; end;
-if nargin < 10, TMres = 0.42; end;
+if nargin < 5,  gain=1.32; end %parameter to control gain of feedback force U
+if nargin < 6,  phi1o=0; end %phase of F1 primary
+if nargin < 7,  phi2o=0; end %phase of F2 primary
+if nargin < 8, T12ono = 0.005; end; %input onset
+if nargin < 9, visual = 1; end; %flag to control visualisation during calculation
+if nargin < 10, TMres = 0.42; end; %shift between BM CF and TM resonance
 if nargin < 11, A3o=20; end %[dB SPL] amplitude of F3 primary
 if nargin < 12, F3o=32; end%[Hz] frequency of bias
-if nargin < 13, phi3o=0; end
-if nargin < 14, T3ono =0.01; end
-if nargin < 15, faca0 =0.01; end
-if nargin < 16, facb0 =0.01; end
-if nargin < 17, OPo =0; end
+if nargin < 13, phi3o=0; end %phase of F3 primary
+if nargin < 14, T3ono =0.01; end %F3 input onset
+if nargin < 15, faca0 =0.01; end %parameter of TM transfer function
+if nargin < 16, facb0 =0.01; end %parameter of TM transfer function
+if nargin < 17, OPo =0; end %OP shift
 
 global Ginv DampSp  stiff bigamma wm2 undamp N MEinv kME hME Gme Sty gammaAir ...
       Ve GammaMi Gs Qbm Sow Wbm Pea

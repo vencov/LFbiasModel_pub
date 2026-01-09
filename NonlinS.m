@@ -1,10 +1,10 @@
 function [y,y1d,y2d,y3d]=NonlinS(x)
-%pocita symetrickou sigmoidu spolu s jejimi derivacemi
+%calculates the symmetric sigmoid (first order BF) along with its derivatives
 
 %Input parameters
  A=0.1;
  y1 = 0.025;
-%Sigmoida:
+%Sigmoid:
   y = A./(1 + exp(-x/y1))-A./2;
 %First derivative of sigmoid:
  y1d=A*exp(-(x/y1))./(y1*(1 + exp(-(x/y1))).^2);
